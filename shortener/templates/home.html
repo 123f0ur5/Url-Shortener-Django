@@ -1,0 +1,10 @@
+{% include 'base.html' %}
+
+{% block content %}
+
+<form method="POST"> {% csrf_token %}
+	{{ my_url }}
+<input type="submit" name="Shorten" value="Shorten">
+</form>
+
+{% endblock %}

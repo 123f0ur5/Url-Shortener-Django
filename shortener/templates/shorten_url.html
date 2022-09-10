@@ -1,0 +1,19 @@
+{% include "base.html" %}
+
+{% block content %}
+<label>Your new link is:</label>
+<input id="myInput" type="text" name="shortened-url" value="127.0.0.1:8000/s/{{ my_identifier }}">
+<button onclick="myFunction()">Copy Link</button>
+{% endblock %}
+
+<script type="text/javascript">
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+
+  copyText.select();
+
+  navigator.clipboard.writeText(copyText.value);
+
+  alert("Copied the text: " + copyText.value);
+}
+</script>
