@@ -2,9 +2,11 @@
 
 {% block content %}
 
+<center>
 <form method="POST"> {% csrf_token %}
 	{{ my_url }}
 <input type="submit" name="Shorten" value="Shorten">
 </form>
+</center>
 
 {% endblock %}
